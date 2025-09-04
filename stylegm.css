@@ -1,0 +1,159 @@
+:root{
+    --primary:rgba(242, 190, 21, 0.97);
+    --secondary:rgba(36, 38, 39, 0.958);
+    --glass:rgba(255,255,255,0.19);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to top,rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%),url(./bgi2.png);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: var(--glass);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+}
+.content{
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.avatar{
+    width: 120px;
+    height: 150px;
+    /* border-radius:50% ; */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.avatar:hover{
+    transform: scale(1.2) translateZ(10px);
+}
+h2{
+    color: white;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+p{
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.socials{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.socials a{
+    width: 40px;
+    height: 40px;
+    background: var(--glass);
+    border-radius: 50%;
+    display: grid;
+    place-items:center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.socials a:hover{
+    background: linear-gradient(45deg,var(--primary),var(--secondary));
+    transform: translateY(-5px);
+}
+button{
+    padding: 12px 30px;
+    background: linear-gradient(45deg,var(--primary),var(--secondary));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s;
+}
+button:hover{
+    letter-spacing: 2px;
+    box-shadow: 0 15px 15px rgba(23, 21, 12, 0.5);
+    /* 0 (Horizontal Offset) → No movement left or right.
+    15px (Vertical Offset) → Moves the shadow 15px downward.
+    15px (Blur Radius) → Softens the edges of the shadow by 15px*/
+}
+@keyframes float{
+    0%, 100% {transform : translateY(0) rotateX(0) rotateY(0);}
+    25% { transform : translateY(-20px) rotateX(5deg) rotateY(5deg);}
+    75% { transform: translateY(20px) rotateX(-5deg) rotateY(-5deg);}
+}
+/* .popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.popup-content input,
+.popup-content textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.popup-content button {
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+} */
