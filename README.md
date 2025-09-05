@@ -6,7 +6,7 @@ A tiny experiment in **glassmorphism magic**!
 - **glassmorphism.html** – The heart of the card 💖  
 - **stylegm.css** – CSS styles for the card ✨
 - **content.js** – Optional JS for minor interactivity 🎉
-- **sarah.jpg** – Profile image used in the card 😎
+- **woman.png** – can replace with our image 😎
 - **bgi2.png** – Background image 🖼️
 
 ## “Give It a Spin 🎡"
